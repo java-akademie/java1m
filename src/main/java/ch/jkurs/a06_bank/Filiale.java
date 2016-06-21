@@ -14,6 +14,11 @@ public class Filiale extends Thread
 	}
 
 
+	public void protokoll()
+	{
+		System.out.printf("%10s  buchungen %,d %n",name,zaehler);
+	}
+
 	@Override
 	public void run()
 	{
@@ -23,9 +28,9 @@ public class Filiale extends Thread
 			{
 				if (interrupted())
 				{
-					System.out.println(name + " fertig " + zaehler);
 					break;
 				}
+				
 				zaehler++;
 
 				konto.einzahlen(1000);

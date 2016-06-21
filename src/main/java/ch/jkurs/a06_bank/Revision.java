@@ -14,6 +14,12 @@ public class Revision extends Thread
 	}
 
 
+	public void protokoll()
+	{
+		System.out.printf("%10s revisionen %,d nok %,d %n","revision",zaehler,fzaehler);
+	}
+
+
 	@Override
 	public void run()
 	{
@@ -38,8 +44,6 @@ public class Revision extends Thread
 
 				if (interrupted())
 				{
-					System.out.println("Revision" + " fehler: "
-							+ fzaehler + " fertig " + zaehler);
 					break;
 				}
 			}

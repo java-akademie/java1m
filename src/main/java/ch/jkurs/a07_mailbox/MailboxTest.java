@@ -3,7 +3,7 @@ package ch.jkurs.a07_mailbox;
 public class MailboxTest
 {
 	static final int maxConsumer = 100;
-	static final int maxProducer = 100;
+	static final int maxProducer = 1;
 	static final int maxMessages = 500;
 
 

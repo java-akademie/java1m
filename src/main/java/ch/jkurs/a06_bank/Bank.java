@@ -14,18 +14,20 @@ public class Bank
 
 		Revision revision = new Revision(konto);
 
+		revision.start();
 		cs.start();
 		db.start();
 		ubs.start();
-		revision.start();
 
 		try
 		{
-			Thread.sleep(5 * 1000);
+			Thread.sleep(2 * 500);
 		}
 		catch (InterruptedException e)
 		{
 		}
+		
+		System.out.println("\nFilialen werden geschlossen\n");
 
 		cs.interrupt();
 		db.interrupt();
@@ -37,6 +39,11 @@ public class Bank
 		ubs.join();
 		revision.join();
 
+		cs.protokoll();
+		db.protokoll();
+		ubs.protokoll();
+		revision.protokoll();
+		
 		System.out.println("\nBank geschlossen");
 	}
 
