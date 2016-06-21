@@ -9,6 +9,7 @@ class Calculator
 	private static int count = 0;
 	private static int sumAmt = 0;
 	private static int sumWeight = 0;
+	static int li, lj, lk, ll, lm, ln;
 
 
 
@@ -18,14 +19,25 @@ class Calculator
 
 		sumWeight = getWeight(i, j, k, l, m, n);
 
+
+
 		if (sumAmt == Constants.SUM_AMOUNT
 				&& sumWeight == Constants.SUM_WEIGHT)
 		{
-			if (++count % 500 == 0)
+			li = i;
+			lj = j;
+			lk = k;
+			ll = l;
+			lm = m;
+			ln = n;
+			
+			count++;
+			if (count % 10000 == 1)
 			{
-				out(i, j, k, l, m, n);
+				out(li, lj, lk, ll, lm, ln);
 			}
 		}
+
 
 		return sumAmt;
 	}
@@ -68,7 +80,8 @@ class Calculator
 				+ "Gewicht=%d, Wert=%d";
 
 		String loesungsZeile = String.format(zeile,
-				Constants.DF.format(new Date()), count, i, j, k, l, m, n,
+				Constants.DF.format(new Date()), count, i, j, k, l, m,
+				n,
 				(i * Cent.HUNDERT.getWeight()
 						+ j * Cent.FIFTY.getWeight()
 						+ k * Cent.TEN.getWeight()
@@ -80,8 +93,7 @@ class Calculator
 						+ k * Cent.TEN.getAmount()
 						+ l * Cent.FIVE.getAmount()
 						+ m * Cent.TWO.getAmount()
-						+ n * Cent.ONE.getAmount())
-				);
+						+ n * Cent.ONE.getAmount()));
 
 		System.out.println(loesungsZeile);
 	}
@@ -144,6 +156,8 @@ class Calculator
 
 	int getSolutions()
 	{
+		
+		out(li, lj, lk, ll, lm, ln);
 		return count;
 	}
 

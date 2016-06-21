@@ -148,9 +148,9 @@ public class Complex
 		if (y == 0.0)
 		{
 			if (x >= 0.0)
-				return 0; // 0°
+				return 0; // 0 Grad
 			else
-				return Math.PI; // 90°
+				return Math.PI; // 90 Grad
 		}
 
 
@@ -160,9 +160,9 @@ public class Complex
 		if (x == 0.0)
 		{
 			if (y >= 0.0)
-				return Math.PI / 2; // 90°
+				return Math.PI / 2; // 90 Grad
 			else
-				return Math.PI / 2 * 3;// 270°
+				return Math.PI / 2 * 3;// 270 Grad
 		}
 
 		// ///////////////////////////////
