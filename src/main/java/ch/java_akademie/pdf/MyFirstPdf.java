@@ -11,16 +11,12 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 public class MyFirstPdf
 {
-
-
-
 	public static void main(String[] args)
 			throws FileNotFoundException, DocumentException
 	{
 		String outputFile = "temp/fritz.pdf";
 		Document doc = new Document(PageSize.A4);
-		PdfWriter
-				.getInstance(doc, new FileOutputStream(outputFile));
+		PdfWriter.getInstance(doc, new FileOutputStream(outputFile));
 
 		doc.open();
 
