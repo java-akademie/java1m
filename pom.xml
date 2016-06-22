@@ -9,7 +9,7 @@
 	<artifactId>java1</artifactId>
 
 	<version>0.0.1-SNAPSHOT</version>
-  
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -21,6 +21,14 @@
 			<groupId>ch.java_akademie.mytoolsm</groupId>
 			<artifactId>mytoolsm</artifactId>
 			<version>1.6.4</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
 		</dependency>
 
 
