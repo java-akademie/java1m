@@ -5,7 +5,6 @@ public class MyImmutable
 	private int id;
 	private String[] werte;
 
-
 	public MyImmutable(int id, String[] werte)
 	{
 		this.id = id;
