@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>ch.java_akademie.mytoolsm</groupId>
 			<artifactId>mytoolsm</artifactId>
-			<version>1.6.4</version>
+			<version>1.8.0</version>
 		</dependency>
 
 
