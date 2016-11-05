@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class Messages
 {
-	private static final String BUNDLE_NAME = "messages"; 
+	private static final String BUNDLE_NAME = "messages";
 
 	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
 			.getBundle(BUNDLE_NAME);
@@ -19,7 +19,7 @@ public class Messages
 		}
 		catch (MissingResourceException e)
 		{
-			return "Achtung: missing resource: " + '!' + key + '!';
+			return "Achtung: missing resource: "  + '!' + key + '!'; 
 		}
 	}
 
