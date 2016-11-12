@@ -28,7 +28,7 @@ public class WorteZaehlen
 
 	public static void main(String[] args) throws FileNotFoundException
 	{
-		FileInputStream fis = new FileInputStream("temp\\test.txt");
+		FileInputStream fis = new FileInputStream("temp/mylog.txt");
 		String regex = "\\s+";
 		Scanner scanner = new Scanner(fis);
 		scanner.useDelimiter(regex);
