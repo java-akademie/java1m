@@ -1,4 +1,4 @@
-package ch.java_akademie.applet1;
+package ch.java_akademie.applet;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 
-public class MyPanel extends Panel
+public class MyPanel2 extends Panel
 		implements ActionListener, ItemListener
 {
 	private static final long serialVersionUID = 1L;
@@ -30,7 +30,7 @@ public class MyPanel extends Panel
 	TextArea ta;
 
 
-	public MyPanel()
+	public MyPanel2()
 	{
 		makeTheLayout();
 		addTheListener();

@@ -7,19 +7,17 @@ import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
-
-import ch.java_akademie.tools.MyTools;
+import java.util.Collections;
 
 public class SortApplet extends Applet implements ActionListener
 {
 	private static final long serialVersionUID = 1L;
 
-	String[] nl = { "a", "b", "c", "d", "e"
+	String[] stringArray = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n" };
+	ArrayList<String> stringArrayList = new ArrayList<String>(Arrays.asList(stringArray));
 
-			, "f", "g", "h", "i", "j", "k", "l", "m", "n"};
 	TextField[] tf;
 	Button b1, b2, b3;
 	Panel p1;
@@ -29,7 +27,7 @@ public class SortApplet extends Applet implements ActionListener
 	{
 		makeTheLayout();
 		addTheListener();
-		this.setSize(300, 800);
+		this.setSize(300, 500);
 	}
 
 
@@ -37,23 +35,21 @@ public class SortApplet extends Applet implements ActionListener
 	{
 		p1 = new Panel();
 
-		p1.setLayout(new GridLayout(nl.length + 3, 1));
+		p1.setLayout(new GridLayout(stringArray.length + 3, 1));
 
-		tf = new TextField[nl.length + 2];
+		tf = new TextField[stringArray.length];
 
-		for (int i = 0; i < nl.length; i++)
+		for (int i = 0; i < stringArray.length; i++)
 		{
-			tf[i] = new TextField(nl[i]);
+			tf[i] = new TextField(stringArray[i]);
 			p1.add(tf[i]);
 		}
 
 		b1 = new Button("sort");
 		b2 = new Button("merge");
-		b3 = new Button("show");
 
 		p1.add(b1);
 		p1.add(b2);
-		p1.add(b3);
 
 		add(p1);
 	}
@@ -63,7 +59,6 @@ public class SortApplet extends Applet implements ActionListener
 	{
 		b1.addActionListener(this);
 		b2.addActionListener(this);
-		b3.addActionListener(this);
 	}
 
 
@@ -88,40 +83,23 @@ public class SortApplet extends Applet implements ActionListener
 
 	private void zeigen()
 	{
-		MyTools.sleep(1000);
-
-		for (int i = 0; i < nl.length; i++)
+		for (int i = 0; i < stringArray.length; i++)
 		{
-			tf[i].setText(nl[i]);
+			tf[i].setText(stringArrayList.get(i));
 		}
 	}
 
 
 	public void sortieren()
 	{
-		Arrays.sort(nl);
+		Collections.sort(stringArrayList);
 		zeigen();
 	}
 
 
 	public void mischen()
 	{
-		shuffleArray(nl);
+		Collections.shuffle(stringArrayList);
 		zeigen();
 	}
-
-
-	public void shuffleArray(String[] ar)
-	{
-		Random rnd = ThreadLocalRandom.current();
-		for (int i = 0; i < ar.length; i++)
-		{
-			int index = rnd.nextInt(i + 1);
-			System.out.println(index);
-			String a = ar[index];
-			ar[index] = ar[i];
-			ar[i] = a;
-		}
-	}
-
 }

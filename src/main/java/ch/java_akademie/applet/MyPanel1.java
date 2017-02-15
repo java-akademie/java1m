@@ -8,7 +8,7 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyPanel extends Panel
+public class MyPanel1 extends Panel
 {
 	private static final long serialVersionUID = 1L;
 	Label lb = new Label("name");
@@ -17,7 +17,7 @@ public class MyPanel extends Panel
 	Button b2 = new Button("NOK");
 
 
-	public MyPanel()
+	public MyPanel1()
 	{
 		makeTheLayout();
 		addTheListener();
