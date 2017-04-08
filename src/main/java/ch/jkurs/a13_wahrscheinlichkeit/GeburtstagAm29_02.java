@@ -4,7 +4,7 @@ package ch.jkurs.a13_wahrscheinlichkeit;
 
 import java.util.Date;
 
-import ch.java_akademie.tools.DateTime;
+import ch.java_akademie.tools.DateTimeTools;
 import ch.java_akademie.tools.MyTools;
 
 public class GeburtstagAm29_02
@@ -36,13 +36,13 @@ public class GeburtstagAm29_02
 	{
 		MyTools.uebOut("Empirisch", 2);
 
-		Date bestimmterTag = DateTime.makeRandomDate(JAHR);
+		Date bestimmterTag = DateTimeTools.makeRandomDate(JAHR);
 
 		int anzahl = 0;
 
 		for (int i = 1; i <= MAX_PERSONEN; i++)
 		{
-			Date d = DateTime.makeRandomDate(JAHR);
+			Date d = DateTimeTools.makeRandomDate(JAHR);
 			if (d.equals(bestimmterTag))
 				anzahl++;
 		}

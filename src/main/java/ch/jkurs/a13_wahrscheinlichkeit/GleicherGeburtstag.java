@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import ch.java_akademie.tools.DateTime;
+import ch.java_akademie.tools.DateTimeTools;
 import ch.java_akademie.tools.MyTools;
 
 public class GleicherGeburtstag
@@ -68,7 +68,7 @@ public class GleicherGeburtstag
 
 		for (int i = 0; i < MAX_SCHUELER; i++)
 		{
-			d[i] = DateTime.makeRandomDate(JAHR);
+			d[i] = DateTimeTools.makeRandomDate(JAHR);
 		}
 
 		// es gibt jetzt MAX Daten
