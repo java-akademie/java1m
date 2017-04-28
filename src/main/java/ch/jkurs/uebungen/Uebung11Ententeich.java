@@ -7,9 +7,29 @@ public class Uebung11Ententeich
 		Uebung11Ente ste = new Uebung11Stockente();
 		Uebung11Rotkopfente rke = new Uebung11Rotkopfente();
 
+		Uebung11Ente ungeheuer = new Uebung11Ente()
+		{
+			@Override
+			void show()
+			{
+				System.out.println("ich bin das Entenungeheuer");
+			}
 
-		life(ste,3);
+
+			@Override
+			void quacken(int anz)
+			{
+				for (int i = 1; i <= anz; i++)
+				{
+					System.out.println("uuuhhhaaaaquaaaaaak");
+				}
+			}
+		};
+		
+		life(ste, 3);
 		life(rke);
+		life(ungeheuer);
+		life(ungeheuer, 2);
 	}
 
 

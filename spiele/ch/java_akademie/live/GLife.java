@@ -24,7 +24,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-class GLifeOptionenDialog extends java.awt.Dialog implements AdjustmentListener, ActionListener
+class GLifeOptionenDialog extends java.awt.Dialog
+		implements AdjustmentListener, ActionListener
 {
 	private static final long serialVersionUID = 1L;
 
@@ -44,10 +45,12 @@ class GLifeOptionenDialog extends java.awt.Dialog implements AdjustmentListener,
 		Panel p1 = new Panel();
 		p1.setLayout(new GridLayout(2, 3));
 		p1.add(new Label("Anzahl Zeilen:"));
-		p1.add(h = new Scrollbar(Scrollbar.HORIZONTAL, nRows, 10, 30, 100));
+		p1.add(h = new Scrollbar(Scrollbar.HORIZONTAL, nRows, 10, 30,
+				100));
 		p1.add(ht = new TextField("" + nRows));
 		p1.add(new Label("Anzahl Spalten:"));
-		p1.add(v = new Scrollbar(Scrollbar.HORIZONTAL, nCols, 10, 30, 100));
+		p1.add(v = new Scrollbar(Scrollbar.HORIZONTAL, nCols, 10, 30,
+				100));
 		p1.add(vt = new TextField("" + nCols));
 		add("Center", p1);
 		Panel p2 = new Panel();
@@ -118,8 +121,8 @@ public class GLife extends Frame
 	private static final long serialVersionUID = 1L;
 	MyCanvas c;
 	MyToolbar t;
-	final static int START = 0, STOP = 1, NEXT = 2, LOAD = 3, OPTIONEN = 4, CLICK = 10,
-			NOTHING = -1;
+	final static int START = 0, STOP = 1, NEXT = 2, LOAD = 3,
+			OPTIONEN = 4, CLICK = 10, NOTHING = -1;
 
 
 	public GLife()
@@ -375,7 +378,8 @@ class MyCanvas extends Canvas implements ActionListener
 	{
 		try
 		{
-			BufferedReader br = new BufferedReader(new FileReader(FileName));
+			BufferedReader br = new BufferedReader(
+					new FileReader(FileName));
 			String s = null;
 			int i = 0;
 			clearField();
@@ -439,8 +443,8 @@ class MyCanvas extends Canvas implements ActionListener
 				kicker.start();
 				break;
 			case GLife.LOAD:
-				java.awt.FileDialog f = new java.awt.FileDialog(frame, "Filename?",
-						FileDialog.LOAD);
+				java.awt.FileDialog f = new java.awt.FileDialog(frame,
+						"Filename?", FileDialog.LOAD);
 				f.setDirectory(".");
 				f.setVisible(true);
 				String Name = f.getFile();
@@ -452,7 +456,8 @@ class MyCanvas extends Canvas implements ActionListener
 				}
 				break;
 			case GLife.OPTIONEN:
-				GLifeOptionenDialog d = new GLifeOptionenDialog(frame, nRows, nCols);
+				GLifeOptionenDialog d = new GLifeOptionenDialog(frame,
+						nRows, nCols);
 				changeFieldDimensions(d.nRows, d.nCols);
 				repaint();
 				break;
