@@ -5,7 +5,7 @@ public class Uebung11Ententeich
 	public static void main(String[] args)
 	{
 		Uebung11Ente ste = new Uebung11Stockente();
-		Uebung11Rotkopfente rke = new Uebung11Rotkopfente();
+		Uebung11Ente rke = new Uebung11Rotkopfente();
 
 		Uebung11Ente ungeheuer = new Uebung11Ente()
 		{
