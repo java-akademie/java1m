@@ -1,8 +1,60 @@
 package ch.java_akademie.sonstiges;
 
+import java.util.Arrays;
+
+import ch.java_akademie.tools.MyTools;
 
 public class Mathematik
 {
+
+	public static void main(String[] args)
+	{
+		primzahlen(3000, 9999);
+		quadrate();
+		rechtwinkeligeDreiecke();
+		dreiecke();
+		pythagoraeischeZahlen();
+		testMai2017();
+	}
+
+
+	private static void pythagoraeischeZahlen()
+	{
+		System.out.println();
+		for (int i = 1; i <= 20; i++)
+			for (int j = 1; j <= 20; j++)
+			{
+				if (i == j)
+					break;
+				int[] a = { Math.abs(i * i - j * j), (i * i + j * j),
+						2 * i * j };
+				Arrays.sort(a);
+				System.out.print(Arrays.toString(a));
+				System.out.println(a[0] * a[0] + a[1] * a[1] + "=="
+						+ (a[2] * a[2]));
+			}
+
+	}
+
+
+	private static void testMai2017()
+	{
+		Boolean b1 = true;
+		// Boolean b2=true;
+		System.out.println(b1);
+		Object o = b1;
+		System.out.println(o);
+
+		// int i = 111;
+		Integer i1 = new Integer(111);
+		Integer i2 = new Integer(44444);
+		if (i1 == i2)
+			System.out.println("i1==i2");
+		System.out.println(i1.hashCode());
+		System.out.println(i2.hashCode());
+	}
+
+
 	static void dreiecke()
 	{
 		System.out.printf("\n");
@@ -51,45 +103,15 @@ public class Mathematik
 	}
 
 
-	public static void main(String[] args)
+	static void primzahlen(final int MIN, final int MAX)
 	{
-		primzahlen();
-		quadrate();
-		rechtwinkeligeDreiecke();
-		dreiecke();
-		limes();
-	}
+		MyTools.uebOut(String.format("Primzahlen %d - %d ", MIN, MAX),
+				3);
 
-
-	static void limes()
-	{
-		System.out.printf("\n");
-		System.out.printf("\nLIMES");
-		System.out.printf("\n=====");
-
-		// x2 - 4
-		// ------ Lim x->2
-		// x - 2
-
-		double x = 2.0000001;
-
-		double erg = (x * x - 4) / (x - 2);
-
-		System.out.println(erg);
-
-		System.out.println("");
-	}
-
-
-	static void primzahlen()
-	{
-		System.out.printf("\n");
-		System.out.printf("\nPRIMZAHLEN 2151-6400");
-		System.out.printf("\n====================");
 
 		int z = 0;
 
-		for (int i = 2151; i < 6400; i++)
+		for (int i = MIN; i <= MAX; i++)
 		{
 			if (isPrim(i))
 			{
@@ -104,9 +126,7 @@ public class Mathematik
 
 	static void quadrate()
 	{
-		System.out.printf("\n");
-		System.out.printf("\nQUADRATE 1-300");
-		System.out.printf("\n==============");
+		MyTools.uebOut("Quadrate 1-300", 3);
 
 		int z = 0;
 
