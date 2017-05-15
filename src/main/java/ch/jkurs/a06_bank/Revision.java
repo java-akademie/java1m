@@ -25,8 +25,13 @@ public class Revision extends Thread
 	{
 		while (true)
 		{
-			synchronized (konto)
+			if (interrupted())
 			{
+				break;
+			}			
+		
+			synchronized (konto)
+			{	
 				int saldo = konto.getSaldo();
 
 				if (saldo != 0)
@@ -39,12 +44,6 @@ public class Revision extends Thread
 				else
 				{
 					zaehler++;
-				}
-
-
-				if (interrupted())
-				{
-					break;
 				}
 			}
 		}

@@ -21,7 +21,7 @@ public class Bank
 
 		try
 		{
-			Thread.sleep(2 * 500);
+			Thread.sleep(100);
 		}
 		catch (InterruptedException e)
 		{
