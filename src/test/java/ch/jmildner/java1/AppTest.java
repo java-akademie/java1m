@@ -1,6 +1,5 @@
 package ch.jmildner.java1;
 
-import ch.jmildner.java1.App;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

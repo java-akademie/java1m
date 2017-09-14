@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.java_akademie.tools.TextFile;
+import ch.jmb.tools.TextFile;
 
 public class Uebung10c
 {

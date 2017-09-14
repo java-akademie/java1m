@@ -1,6 +1,6 @@
 package ch.java_akademie.towers;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class TowersOfHanoi
 {

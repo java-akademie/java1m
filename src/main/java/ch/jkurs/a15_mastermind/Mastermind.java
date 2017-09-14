@@ -2,7 +2,7 @@ package ch.jkurs.a15_mastermind;
 
 import java.util.Arrays;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class Mastermind
 {

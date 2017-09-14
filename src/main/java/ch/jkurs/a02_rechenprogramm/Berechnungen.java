@@ -1,6 +1,6 @@
 package ch.jkurs.a02_rechenprogramm;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class Berechnungen
 {

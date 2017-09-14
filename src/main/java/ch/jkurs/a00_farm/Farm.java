@@ -1,6 +1,6 @@
 package ch.jkurs.a00_farm;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class Farm
 {

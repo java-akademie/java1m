@@ -1,7 +1,7 @@
 package ch.jkurs.uebungen;
 
-import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TextFile;
+import ch.jmb.tools.MyTools;
+import ch.jmb.tools.TextFile;
 
 public class Uebung09
 {

@@ -1,7 +1,7 @@
 
 package ch.java_akademie.mastermind;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class MasterMind
 {

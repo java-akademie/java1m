@@ -1,6 +1,6 @@
 package ch.jkurs.a06_verehrer;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class Dame
 {

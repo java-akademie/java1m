@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 /**
  * Uebung 3a, 3b und 3c unter Zuhilfenahme von Methoden

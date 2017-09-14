@@ -2,7 +2,7 @@ package ch.java_akademie.message;
 
 import org.apache.log4j.Logger;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 public class Test
 {

@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import ch.java_akademie.tools.DateTimeTools;
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.DateTimeTools;
+import ch.jmb.tools.MyTools;
 
 public class GleicherGeburtstag
 {

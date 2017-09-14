@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.java_akademie.tools.MyTools;
+import ch.jmb.tools.MyTools;
 
 /**
  * zwei Zahlen mittels MyTools.getInteger() einlesen und an der Konsole
