@@ -1,24 +1,32 @@
 package ch.jkurs.uebungen;
 
-public class Uebung12xTestGruseligesUngeheuer
-{
-	public static void main(String[] args)
-	{
-		/**
-		 * anonyme innere Klasse
-		 */
-		Uebung12Brueller gruseligesUngeheuer1 = new Uebung12Brueller()
-		{
-			@Override
-			public void bruellen()
-			{
-				System.out.println("ich bin das gruseliges Ungeheuer1");
-				System.out.println("uuuuuaaaaaahhhhhhhhhhhhhhh");
-			}
-		};
-		gibLaut(gruseligesUngeheuer1);
-		gibLaut(gruseligesUngeheuer1);
+import ch.jmb.tools.MyTools;
 
+public class Uebung15FiktivesUngeheuer_Lambda
+{
+	//
+	// gibLaut verlangt einen Brueller (das Interface Uebung12Brueller)
+	//
+	private static void gibLaut(Uebung12Brueller brueller)
+	{
+		System.out.println();
+		System.out.println(brueller);
+		brueller.bruellen();
+	}
+
+
+
+	private static void test1()
+	{
+		MyTools.uebOut("test1", 3);
+		Uebung12Brueller brueller = () -> System.out.println("quiiiiiiiiiuuuuuuaaaaaaahhhhhhhh");
+		brueller.bruellen();
+	}
+
+
+	private static void test2()
+	{
+		MyTools.uebOut("test2", 3);
 		/**
 		 * Lambda
 		 */
@@ -61,10 +69,11 @@ public class Uebung12xTestGruseligesUngeheuer
 	}
 
 
-	private static void gibLaut(Uebung12Brueller b)
+	public static void main(String[] args)
 	{
-		System.out.println();
-		System.out.println(b);
-		b.bruellen();
+		test1();
+		test2();
 	}
 }
+
+
