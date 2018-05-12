@@ -2,8 +2,8 @@ package ch.jkurs.a04_adressverwaltung;
 
 import java.io.FileNotFoundException;
 
-import ch.jmb.tools.MyTools;
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.MyTools;
+import ch.jmildner.tools.TextFile;
 
 public class Adressverwaltung1
 {

@@ -1,7 +1,7 @@
 package ch.jkurs.a05_personenverwaltung;
 
-import ch.jmb.tools.MyTools;
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.MyTools;
+import ch.jmildner.tools.TextFile;
 
 public class Adressverwaltung2
 {

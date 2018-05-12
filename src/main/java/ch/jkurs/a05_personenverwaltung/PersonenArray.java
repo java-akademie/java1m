@@ -2,8 +2,9 @@ package ch.jkurs.a05_personenverwaltung;
 
 import java.io.FileNotFoundException;
 
-import ch.jmb.tools.MyTools;
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.MyTools;
+import ch.jmildner.tools.TextFile;
+
 
 public class PersonenArray
 {
@@ -38,8 +39,8 @@ public class PersonenArray
 
 		outFile.close();
 
-		System.out.println("Adressarray wurde in die Datei '"
-				+ fileName + "' geschrieben");
+		System.out.println("Adressarray wurde in die Datei '" + fileName
+				+ "' geschrieben");
 	}
 
 

@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 /**
  * wie Kreisprogramm Uebung04a <br/>

@@ -1,6 +1,6 @@
 package ch.jkurs.a05_personenverwaltung;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Person
 {

@@ -2,7 +2,7 @@ package ch.jkurs.uebungen;
 
 import java.io.FileNotFoundException;
 
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.TextFile;
 
 public class Uebung09b
 {

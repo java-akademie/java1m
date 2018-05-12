@@ -1,7 +1,7 @@
 package ch.jkurs.uebungen;
 
-import ch.jmb.tools.MyTools;
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.MyTools;
+import ch.jmildner.tools.TextFile;
 
 public class Uebung09
 {
@@ -16,8 +16,8 @@ public class Uebung09
 		while (!s.equals("$$$"))
 		{
 			tf.printLine(s);
-			s = MyTools
-					.getString("bitte Text eingeben (mit $$$ beenden) > ");
+			s = MyTools.getString(
+					"bitte Text eingeben (mit $$$ beenden) > ");
 		}
 		tf.close();
 

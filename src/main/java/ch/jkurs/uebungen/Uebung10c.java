@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.TextFile;
 
 public class Uebung10c
 {

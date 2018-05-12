@@ -2,8 +2,8 @@ package ch.jkurs.a09_muenzen;
 
 import java.io.FileNotFoundException;
 
-import ch.jmb.tools.StoppUhr;
-import ch.jmb.tools.TextFile;
+import ch.jmildner.tools.StoppUhr;
+import ch.jmildner.tools.TextFile;
 
 /**
  * 

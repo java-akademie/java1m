@@ -3,7 +3,7 @@ package ch.jkurs.a16_lotto;
 import java.util.Set;
 import java.util.TreeSet;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Lottomat
 {

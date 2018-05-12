@@ -2,7 +2,7 @@ package ch.jmildner.java1;
 
 import org.apache.log4j.Logger;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 
 public class App

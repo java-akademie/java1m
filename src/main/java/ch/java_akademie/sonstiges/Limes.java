@@ -1,6 +1,6 @@
 package ch.java_akademie.sonstiges;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Limes
 {

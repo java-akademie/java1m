@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 /**
  * Alle durch 'teiler' teilbaren Zahlen zwischen 'start' und 'stopp' and

@@ -2,7 +2,7 @@ package ch.java_akademie.sonstiges;
 
 import java.util.Arrays;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Mathematik
 {

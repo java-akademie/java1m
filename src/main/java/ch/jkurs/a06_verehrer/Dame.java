@@ -1,6 +1,6 @@
 package ch.jkurs.a06_verehrer;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Dame
 {

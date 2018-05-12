@@ -1,6 +1,6 @@
 package ch.jkurs.uebungen;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 /**
  * Uebung 3a, 3b und 3c unter Zuhilfenahme von Methoden

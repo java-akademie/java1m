@@ -4,8 +4,8 @@ package ch.jkurs.a13_wahrscheinlichkeit;
 
 import java.util.Date;
 
-import ch.jmb.tools.DateTimeTools;
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.DateTimeTools;
+import ch.jmildner.tools.MyTools;
 
 public class GeburtstagAm29_02
 {
