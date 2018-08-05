@@ -1,5 +1,5 @@
 
-package ch.java_akademie.mastermind;
+package ch.jkurs.spiele.mastermind;
 
 import ch.jmildner.tools.MyTools;
 

@@ -1,4 +1,4 @@
-package ch.java_akademie.lotto;
+package ch.jkurs.spiele.lotto;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -21,23 +21,31 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
 
-public class LottoPanel extends JPanel
+public class Lotto2Panel extends JPanel
 {
 	private static final long serialVersionUID = 1L;
 
-	LottoFrame lottoFrame;
+	Lotto2Frame lottoFrame;
+
 	boolean test = false;
+
 	int zZiehungen, zDreier, zVierer, zFuenfer, zSechser = 0;
+
 	boolean gewonnen = false;
+
 	int stufe = 4; // ende bei welcher gewinnstufe
 	int zeige = 3; // zeige ab welcher gewinnstufe
+
 	int[] tipp = new int[45];
 	int[] ziehung = new int[45];
+
 	int[] statistik = new int[45];
+
 	int zaehler3 = 0;
 	int zaehler4 = 0;
 	int zaehler5 = 0;
 	int zaehler6 = 0;
+
 	JTextField t1 = new JTextField("");
 	JTextField t2 = new JTextField("");
 	JTextField t3 = new JTextField("");
@@ -47,35 +55,43 @@ public class LottoPanel extends JPanel
 	JTextField t7 = new JTextField("");
 	JTextField t8 = new JTextField("");
 	JTextField t9 = new JTextField("");
+
 	JTextArea ta;
 	JTextArea ta1 = new JTextArea("", 5, 75);
 	JTextArea ta2 = new JTextArea("", 17, 75);
+
 	JButton motif = new JButton("motif");
 	JButton metal = new JButton("metal");
 	JButton windows = new JButton("windows");
+	JButton mac = new JButton("mac");
+
 	JButton zufall = new JButton("Zufall");
+
 	JButton start = new JButton("Start");
 	JButton stop = new JButton("Stop");
+
 	ButtonGroup esGroup = new ButtonGroup();
 	JRadioButton es3 = new JRadioButton("3", false);
 	JRadioButton es4 = new JRadioButton("4", true);
 	JRadioButton es5 = new JRadioButton("5", false);
 	JRadioButton es6 = new JRadioButton("6", false);
+
 	ButtonGroup zsGroup = new ButtonGroup();
 	JRadioButton zs3 = new JRadioButton("3", true);
 	JRadioButton zs4 = new JRadioButton("4", false);
 	JRadioButton zs5 = new JRadioButton("5", false);
 	JRadioButton zs6 = new JRadioButton("6", false);
+
 	JButton ende = new JButton("Ende");
 
 
-	public LottoPanel()
+	public Lotto2Panel()
 	{
 		this(null);
 	}
 
 
-	public LottoPanel(LottoFrame lottoFrame)
+	public Lotto2Panel(Lotto2Frame lottoFrame)
 	{
 		this.lottoFrame = lottoFrame;
 		makeTheLayout();
@@ -91,6 +107,7 @@ public class LottoPanel extends JPanel
 		zufall.setToolTipText("erstellen Sie zufaellige Lottozahlen");
 		motif.setToolTipText("Look and Feel umschalten (Motif)");
 		windows.setToolTipText("Look and Feel umschalten (Windwos)");
+		mac.setToolTipText("Look and Feel umschalten (Mac)");
 		metal.setToolTipText("Look and Feel umschalten (Metal)");
 		zs3.setToolTipText("zeige alle Dreier");
 		zs4.setToolTipText("zeige alle Vierer");
@@ -103,23 +120,30 @@ public class LottoPanel extends JPanel
 	}
 
 
-	private void setLF(String plaf)
+	private void setLookAndFeel(String plaf)
 	{
-		System.out.println("look and feel: " + plaf);
+		System.out.printf("%nset Look and Feel [%s]%n", plaf);
+
 		try
 		{
 			UIManager.setLookAndFeel(plaf);
 			SwingUtilities.updateComponentTreeUI(this);
+			System.out.println(UIManager.getLookAndFeel());
 			System.out.println("ok");
 		}
 		catch (Exception e)
 		{
-			System.out.println("l und f fehler");
+			System.out.printf(
+					"fuer dieses Betriebssystem ist dieses Look and Feel nicht erlaubt%n  ");
+			System.out.printf(
+					"aus Copyright-Gruenden ist Windows auf Mac oder Mac auf Windows nicht erlaubt%n%n");
 		}
+
 		if (lottoFrame != null)
 		{
 			lottoFrame.packAndShow();
 		}
+
 	}
 
 
@@ -133,17 +157,21 @@ public class LottoPanel extends JPanel
 		{
 			ta = ta2;
 		}
+
 		JPanel pKopf = makeKopf(); // Ueberschrift: Lottomat ....
-		JPanel pDaten = makeDaten();
-		// Einbabebereich, Ausgabebereich
+		JPanel pDaten = makeDaten(); // e/a Bereich
 		JPanel pFuss = makeFuss(); // copyright, Autor
+
 		setLayout(new BorderLayout());
 		add("North", pKopf);
 		add("Center", pDaten);
 		add("South", pFuss);
+
 		oeffnen();
-		// setLF("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+	
+		System.out.println(UIManager.getLookAndFeel());
 	}
+
 
 
 	private JPanel makeKopf()
@@ -186,6 +214,7 @@ public class LottoPanel extends JPanel
 		lf.add(motif);
 		lf.add(metal);
 		lf.add(windows);
+		lf.add(mac);
 		lf.add(ende);
 		p.setLayout(new BorderLayout());
 		p.add(BorderLayout.WEST, lf);
@@ -312,7 +341,7 @@ public class LottoPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent ae)
 			{
-				setLF("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+				setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 			}
 		});
 
@@ -320,7 +349,7 @@ public class LottoPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent ae)
 			{
-				setLF("javax.swing.plaf.metal.MetalLookAndFeel");
+				setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 			}
 		});
 
@@ -328,7 +357,15 @@ public class LottoPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent ae)
 			{
-				setLF("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+				setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+			}
+		});
+
+		mac.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent ae)
+			{
+				setLookAndFeel("com.apple.laf.AquaLookAndFeel");
 			}
 		});
 

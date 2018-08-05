@@ -1,4 +1,4 @@
-package ch.java_akademie.live;
+package ch.jkurs.spiele.live;
 
 import java.awt.BorderLayout;
 import java.awt.Button;

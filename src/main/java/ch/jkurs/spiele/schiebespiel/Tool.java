@@ -1,4 +1,4 @@
-package ch.java_akademie.schiebespiel;
+package ch.jkurs.spiele.schiebespiel;
 
 import java.util.Set;
 

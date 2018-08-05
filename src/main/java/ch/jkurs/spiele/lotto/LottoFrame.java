@@ -1,4 +1,4 @@
-package ch.java_akademie.lotto;
+package ch.jkurs.spiele.lotto;
 
 import java.awt.Container;
 import java.awt.event.WindowAdapter;
@@ -6,16 +6,16 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
-public class Lotto2Frame extends JFrame
+public class LottoFrame extends JFrame
 {
 	private static final long serialVersionUID = 1L;
 
 
-	public Lotto2Frame()
+	public LottoFrame()
 	{
-		super("Lotto2");
+		super("Lotto");
 		Container cont = getContentPane();
-		cont.add(new Lotto2Panel(this));
+		cont.add(new LottoPanel(this));
 		setLocation(200, 100);
 		packAndShow();
 		addWindowListener(new WindowAdapter()
@@ -37,6 +37,6 @@ public class Lotto2Frame extends JFrame
 
 	public static void main(String[] args)
 	{
-		new Lotto2Frame();
+		new LottoFrame();
 	}
 }

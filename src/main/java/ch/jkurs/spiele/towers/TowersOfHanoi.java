@@ -1,4 +1,4 @@
-package ch.java_akademie.towers;
+package ch.jkurs.spiele.towers;
 
 import ch.jmildner.tools.MyTools;
 
