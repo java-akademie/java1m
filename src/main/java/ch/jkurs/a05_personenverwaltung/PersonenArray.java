@@ -5,182 +5,171 @@ import java.io.FileNotFoundException;
 import ch.jmildner.tools.MyTools;
 import ch.jmildner.tools.TextFile;
 
-
 public class PersonenArray
 {
-	private String fileName;
-	private Person[] person = new Person[1000];
-	private int anzahlPersonen = 0;
 
+    private final String fileName;
+    private final Person[] person = new Person[1000];
+    private int anzahlPersonen = 0;
 
-	public PersonenArray(String fileName)
-	{
-		this.fileName = fileName;
-	}
+    public PersonenArray(String fileName)
+    {
+        this.fileName = fileName;
+    }
 
+    public void abspeichern()
+    {
+        TextFile outFile = null;
 
-	public void abspeichern()
-	{
-		TextFile outFile = null;
+        try
+        {
+            outFile = new TextFile(fileName, 'o');
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
 
-		try
-		{
-			outFile = new TextFile(fileName, 'o');
-		}
-		catch (FileNotFoundException e)
-		{
-			e.printStackTrace();
-		}
+        for (int i = 0; i < anzahlPersonen; i++)
+        {
+            outFile.printLine(person[i].toString());
+        }
 
-		for (int i = 0; i < anzahlPersonen; i++)
-		{
-			outFile.printLine(person[i].toString());
-		}
+        outFile.close();
 
-		outFile.close();
+        System.out.println("Adressarray wurde in die Datei '" + fileName
+                + "' geschrieben");
+    }
 
-		System.out.println("Adressarray wurde in die Datei '" + fileName
-				+ "' geschrieben");
-	}
+    public String anzeigen()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n    AnzahlPersonen: " + anzahlPersonen + "\n\n");
 
+        System.out.println();
+        System.out.println("     Anzahl Personen: " + anzahlPersonen);
+        System.out.println();
 
+        for (int i = 0; i < anzahlPersonen; i++)
+        {
+            sb.append(person[i].show());
+        }
 
-	public String anzeigen()
-	{
-		StringBuilder sb = new StringBuilder();
-		sb.append("\n    AnzahlPersonen: " + anzahlPersonen + "\n\n");
+        System.out.println("");
+        sb.append("\n");
 
-		System.out.println();
-		System.out.println("     Anzahl Personen: " + anzahlPersonen);
-		System.out.println();
+        return sb.toString();
+    }
 
-		for (int i = 0; i < anzahlPersonen; i++)
-		{
-			sb.append(person[i].show());
-		}
+    public void einlesen()
+    {
+        TextFile inFile = null;
 
-		System.out.println("");
-		sb.append("\n");
+        try
+        {
+            inFile = new TextFile(fileName, 'i');
+        }
+        catch (FileNotFoundException e)
+        {
+            // adressdaten noch nicht vorhanden
+            return;
+        }
 
-		return sb.toString();
-	}
+        String s;
 
+        anzahlPersonen = 0;
 
-	public void einlesen()
-	{
-		TextFile inFile = null;
+        while ((s = inFile.readLine()) != null)
+        {
+            person[anzahlPersonen++] = new Person(s);
+        }
 
-		try
-		{
-			inFile = new TextFile(fileName, 'i');
-		}
-		catch (FileNotFoundException e)
-		{
-			// adressdaten noch nicht vorhanden
-			return;
-		}
+        inFile.close();
 
-		String s;
+        System.out.println("Adressarray wurde aus der Datei '"
+                + fileName + "' gefuellt");
 
-		anzahlPersonen = 0;
+    }
 
-		while ((s = inFile.readLine()) != null)
-		{
-			person[anzahlPersonen++] = new Person(s);
-		}
+    public void erfassen()
+    {
+        System.out.println("");
 
-		inFile.close();
+        Person p = new Person();
 
-		System.out.println("Adressarray wurde aus der Datei '"
-				+ fileName + "' gefuellt");
+        if (vorhanden(p))
+        {
+            System.out.println("Person schon vorhanden ...");
+        }
+        else
+        {
+            person[anzahlPersonen++] = p;
+        }
+    }
 
-	}
+    public void loeschen()
+    {
+        if (anzahlPersonen == 0)
+        {
+            System.out.println("keine Personen gespeichert ...");
+            return;
+        }
 
+        int zwId = MyTools.getInteger("     ID   > ");
 
+        // ID suchen
+        int i;
+        for (i = 0; i < anzahlPersonen; i++)
+        {
+            if (zwId == person[i].getId())
+            {
+                break;
+            }
+        }
 
-	public void erfassen()
-	{
-		System.out.println("");
+        if (i == anzahlPersonen)
+        {
+            System.out.println("ID nicht vorhanden ...");
+            return;
+        }
 
-		Person p = new Person();
+        person[i] = person[--anzahlPersonen];
+        sortieren();
 
-		if (vorhanden(p))
-		{
-			System.out.println("Person schon vorhanden ...");
-		}
-		else
-		{
-			person[anzahlPersonen++] = p;
-		}
-	}
+        System.out.println("Adresse wurde aus Array entfernt");
 
+    }
 
-	public void loeschen()
-	{
-		if (anzahlPersonen == 0)
-		{
-			System.out.println("keine Personen gespeichert ...");
-			return;
-		}
+    public void sortieren()
+    {
+        for (int i = 0; i < anzahlPersonen - 1; i++)
+        {
+            for (int j = i; j < anzahlPersonen; j++)
+            {
+                if (person[i].getId() > person[j].getId())
+                {
+                    Person zw = new Person(person[i].toString());
+                    person[i] = new Person(person[j].toString());
+                    person[j] = new Person(zw.toString());
+                }
+            }
+        }
 
+        System.out.println("");
+        System.out.println("Personen sortiert!");
+        System.out.println("");
+    }
 
-		int zwId = MyTools.getInteger("     ID   > ");
+    private boolean vorhanden(Person p)
+    {
+        for (int i = 0; i < anzahlPersonen; i++)
+        {
+            if (p.getId() == person[i].getId())
+            {
+                return true;
+            }
+        }
 
-		// ID suchen
-		int i;
-		for (i = 0; i < anzahlPersonen; i++)
-		{
-			if (zwId == person[i].getId())
-			{
-				break;
-			}
-		}
-
-		if (i == anzahlPersonen)
-		{
-			System.out.println("ID nicht vorhanden ...");
-			return;
-		}
-
-		person[i] = person[--anzahlPersonen];
-		sortieren();
-
-		System.out.println("Adresse wurde aus Array entfernt");
-
-	}
-
-
-	public void sortieren()
-	{
-		for (int i = 0; i < anzahlPersonen - 1; i++)
-		{
-			for (int j = i; j < anzahlPersonen; j++)
-			{
-				if (person[i].getId() > person[j].getId())
-				{
-					Person zw = new Person(person[i].toString());
-					person[i] = new Person(person[j].toString());
-					person[j] = new Person(zw.toString());
-				}
-			}
-		}
-
-		System.out.println("");
-		System.out.println("Personen sortiert!");
-		System.out.println("");
-	}
-
-
-	private boolean vorhanden(Person p)
-	{
-		for (int i = 0; i < anzahlPersonen; i++)
-		{
-			if (p.getId() == person[i].getId())
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
+        return false;
+    }
 }
