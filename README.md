@@ -29,5 +29,6 @@ ZWEI WORKSPACES
 	JAVASE und
 	JAVASE-GITHUB
 
+javaSE sollte gelöscht werden
 ```
 
