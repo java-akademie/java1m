@@ -8,7 +8,7 @@
 	<groupId>ch.jmildner</groupId>
 	<artifactId>java1</artifactId>
 	<version>1.8.0</version>
-	
+	 
 	<packaging>jar</packaging>
 
 	<name>java1</name>
