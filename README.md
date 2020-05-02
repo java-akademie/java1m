@@ -22,5 +22,7 @@ habe ich java1m aus github neu importiert.
 pom.xml angepasst 
 java1 befindet sich nun in C:\Users\johan\Desktop\eclipse-workspaces\javaSE\java1m
 in GitHub wieder gespeichert (commit/push)
+
+java1 sollte aus C:\Users\johan\Desktop\eclipse-workspaces\javaSE entfernt werden.
 ```
 
