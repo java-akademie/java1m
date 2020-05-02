@@ -24,5 +24,10 @@ java1 befindet sich nun in C:\Users\johan\Desktop\eclipse-workspaces\javaSE\java
 in GitHub wieder gespeichert (commit/push)
 
 java1 sollte aus C:\Users\johan\Desktop\eclipse-workspaces\javaSE entfernt werden.
+
+ZWEI WORKSPACES
+	JAVASE und
+	JAVASE-GITHUB
+
 ```
 
