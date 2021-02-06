@@ -14,7 +14,7 @@ public class App
 	{
 		System.out.println("Hello World!");
 
-		MyTools.uebOut("eine Ueberschrift");
+		MyTools.h2("eine Ueberschrift",2);
 
 		log.info("eine Information");
 
@@ -24,6 +24,6 @@ public class App
 
 		log.warn("eine Warnmeldung");
 
-		MyTools.untOut("eine Unterschrift");
+		MyTools.h2("eine Unterschrift",2);
 	}
 }

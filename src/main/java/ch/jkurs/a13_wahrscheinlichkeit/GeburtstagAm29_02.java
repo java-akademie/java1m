@@ -23,7 +23,7 @@ public class GeburtstagAm29_02
 
 	private static void mathematisch() throws Exception
 	{
-		MyTools.uebOut("Mathematisch", 2);
+		MyTools.h2("Mathematisch", 2);
 		double guenstig = 1, moeglich = TAGE;
 		double w = guenstig / moeglich;
 
@@ -34,7 +34,7 @@ public class GeburtstagAm29_02
 
 	private static void empirisch() throws Exception
 	{
-		MyTools.uebOut("Empirisch", 2);
+		MyTools.h2("Empirisch", 2);
 
 		Date bestimmterTag = DateTimeTools.makeRandomDate(JAHR);
 

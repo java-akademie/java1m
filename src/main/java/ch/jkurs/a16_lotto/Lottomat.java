@@ -17,7 +17,7 @@ public class Lottomat
 				"Lotto %d aus %d (MAX_GEWINNZAHL sollte auf 45 oder 42 gesetzt werden)",
 				MAX_TIPPS, MAX_GEWINNZAHL);
 
-		MyTools.uebOut(uberschrift, 2);
+		MyTools.h2(uberschrift, 2);
 
 		System.out.println();
 

@@ -18,7 +18,7 @@ public class Uebung15FiktivesUngeheuer_Lambda
 
 	private static void test1()
 	{
-		MyTools.uebOut("test1", 3);
+		MyTools.h2("test1", 3);
 		Uebung12Brueller brueller = () -> System.out.println("quiiiiiiiiiuuuuuuaaaaaaahhhhhhhh");
 		brueller.bruellen();
 	}
@@ -26,7 +26,7 @@ public class Uebung15FiktivesUngeheuer_Lambda
 
 	private static void test2()
 	{
-		MyTools.uebOut("test2", 3);
+		MyTools.h2("test2", 3);
 		/**
 		 * Lambda
 		 */

@@ -13,7 +13,7 @@ public class Mastermind
 
 	public static void main(String[] args)
 	{
-		MyTools.uebOut("START MASTERMIND");
+		MyTools.h2("START MASTERMIND",2);
 		
 		String message = "Sie sind doch zu bloed";
 		
@@ -42,7 +42,7 @@ public class Mastermind
 
 		System.out.println(Arrays.toString(aufgabe));
 
-		MyTools.uebOut("ENDE MASTERMIND", 2);
+		MyTools.h2("ENDE MASTERMIND", 2);
 	}
 
 

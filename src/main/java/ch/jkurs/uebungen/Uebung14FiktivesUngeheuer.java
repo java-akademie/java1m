@@ -18,7 +18,7 @@ public class Uebung14FiktivesUngeheuer
 
 	private static void testMitInnererKlasse()
 	{
-		MyTools.uebOut("TestMitInnererKlasse", 3);
+		MyTools.h2("TestMitInnererKlasse", 3);
 
 
 		/*
@@ -44,7 +44,7 @@ public class Uebung14FiktivesUngeheuer
 
 	private static void testMitAnonymerInnererKlasse()
 	{
-		MyTools.uebOut("TestMitAnonymerInnererKlasse", 3);
+		MyTools.h2("TestMitAnonymerInnererKlasse", 3);
 
 		/*
 		 * anonyme innere Klasse benutzen.

@@ -26,7 +26,7 @@ public class GleicherGeburtstag
 
 	private static void mathematisch() throws Exception
 	{
-		MyTools.uebOut("Mathematisch", 2);
+		MyTools.h2("Mathematisch", 2);
 
 		double ps = 1.0;
 
@@ -43,7 +43,7 @@ public class GleicherGeburtstag
 
 	private static void empirisch() throws Exception
 	{
-		MyTools.uebOut("Empirisch", 2);
+		MyTools.h2("Empirisch", 2);
 
 		int gesamt = 0;
 		int klassen = 0;

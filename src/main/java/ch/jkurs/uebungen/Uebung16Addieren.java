@@ -12,7 +12,7 @@ public class Uebung16Addieren
 
 	public static void main(String[] args)
 	{
-		MyTools.uebOut("test1", 3);
+		MyTools.h2("test1", 3);
 		Addieren add = (int a, int b) -> {return a + b;} ;
 		int summe = add.add(5, 6);
 		System.out.println(summe);

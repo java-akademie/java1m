@@ -11,7 +11,7 @@ public class Test
 
 	public static void main(String[] args)
 	{
-		MyTools.uebOut("eine Ueberschrift", 3);
+		MyTools.h2("eine Ueberschrift", 3);
 
 		log.info("eine Information");
 
@@ -30,7 +30,7 @@ public class Test
 		System.out.println(x);
 		System.out.println(y);
 
-		MyTools.untOut("eine Unterschrift", 3);
+		MyTools.h2("eine Unterschrift", 3);
 	}
 }
 
